@@ -1,60 +1,77 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import profile from '../assets/pic-1.png';
 
 const About = () => {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      {/* Title Section */}
+    <div className="w-full bg-black text-white px-6 py-20">
+      {/* Title */}
       <motion.h2
-        className="text-4xl md:text-5xl font-extrabold text-center mb-10 text-primary"
+        className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-cyan-400"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Who I Am
+        About Me
       </motion.h2>
 
-      {/* About Text */}
+      {/* Content */}
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+        {/* Profile Image */}
+        <motion.div
+          className="flex-shrink-0 relative"
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Glowing border effect */}
+          <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 blur-lg opacity-40 animate-pulse"></div>
+          <img
+            src={profile}
+            alt="Tushar Debnath"
+            className="relative w-56 h-56 rounded-full object-cover border-4 border-cyan-400 shadow-2xl"
+          />
+        </motion.div>
+
+        {/* About Text */}
+        <motion.div
+          className="flex-1 bg-[#0f0f0f] p-8 rounded-2xl shadow-lg leading-relaxed text-gray-300"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <p className="mb-4">
+            Hi, I’m <span className="font-semibold text-cyan-400">Tushar Debnath</span>, 
+            a passionate <span className="font-semibold text-white">Diploma in Computer Science and Technology</span> student 
+            with a strong love for web development and problem-solving.
+          </p>
+
+          <p className="mb-4">
+            I specialize in the <span className="font-semibold text-cyan-400">MERN stack</span> 
+            and focus on creating modern, responsive, and scalable web applications 
+            that combine both functionality and design excellence.
+          </p>
+
+          <p>
+            Outside of coding, I enjoy exploring new technologies, creative ideas, 
+            and learning about space and science mysteries.  
+            I’m always excited to collaborate on meaningful projects and grow as a developer.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Skills */}
       <motion.div
-        className="bg-base-200 p-8 rounded-2xl shadow-lg leading-relaxed text-lg text-gray-700 dark:text-gray-300"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <p className="mb-4">
-          Hi, I’m <span className="font-semibold text-primary">Tushar Debnath</span> — a passionate and dedicated
-          programmer who thrives on turning ideas into elegant and functional
-          digital experiences. With a strong self-learning mindset, I’m always
-          exploring new technologies, sharpening my skills, and tackling
-          challenges with creativity and persistence.
-        </p>
-
-        <p className="mb-4">
-          I love working across the full stack of web development and enjoy
-          creating tools that make the web more open, accessible, and impactful.
-          My main focus is on JavaScript and modern frameworks like React and
-          Node.js. I believe in writing clean, efficient, and user-friendly
-          code that delivers real-world value.
-        </p>
-
-        <p>
-          I’m currently open to exciting opportunities that align with my
-          technical skills and creative interests.
-        </p>
-      </motion.div>
-
-      {/* Skills Section */}
-      <motion.div
-        className="mt-10 flex flex-wrap justify-center gap-4"
+        className="mt-12 flex flex-wrap justify-center gap-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        {['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Web Development'].map(
+        {['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS'].map(
           (skill, index) => (
             <span
               key={index}
-              className="px-5 py-2 bg-primary text-white rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-transform duration-300 hover:-translate-y-1"
+              className="px-5 py-2 bg-cyan-500 text-black rounded-full text-sm font-semibold shadow-md hover:shadow-cyan-400/50 transition-transform duration-300 hover:-translate-y-1"
             >
               {skill}
             </span>

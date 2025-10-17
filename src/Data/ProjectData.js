@@ -1,35 +1,38 @@
 
 
 const ProjectData = [
-  {
+   {
     id: 1,
-    title: "Food Donation Platform",
-    image: "/assets/projects/food_donation.png",
-    description:
-      "A MERN stack web app where users can donate surplus food, request food, and manage donations. Includes Firebase Auth, role-based access, and MongoDB backend.",
-    technologies: ["React", "Node.js", "MongoDB", "Firebase"],
-    liveLink: "https://your-live-site.com",
-    githubLink: "https://github.com/yourname/food-donation",
+    title: "Portfolio Website",
+    image: "/images/portfolio.png",
+    description: "Responsive portfolio website to showcase projects and skills.",
+    technologies: ["React", "TailwindCSS", "Vite"],
+    liveLink: "https://example.com",
+    githubLink: "https://github.com/username/portfolio-client",
+    challenges: "Dark/Light mode toggle integration and responsive grid layout.",
+    futurePlans: "Add blog section and animations for better UX."
   },
   {
     id: 2,
-    title: "Recipe Book App",
-    image: "/assets/projects/recipe_app.png",
-    description:
-      "Users can explore recipes, like others’ recipes, and manage their own collections. Includes authentication, filtering, and dark/light mode toggle.",
-    technologies: ["React", "Express", "MongoDB"],
-    liveLink: "https://your-recipe-app.com",
-    githubLink: "https://github.com/yourname/recipe-book",
+    title: "Food Sharing App",
+    image: "/images/foodapp.png",
+    description: "A full-stack food sharing platform built with MERN stack.",
+    technologies: ["React", "Node.js", "MongoDB", "Firebase"],
+    liveLink: "https://example.com",
+    githubLink: "https://github.com/username/foodapp-client",
+    challenges: "Implementing JWT authentication and responsive UI.",
+    futurePlans: "Add push notifications and better search functionality."
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    image: "/assets/projects/portfolio.png",
-    description:
-      "My personal portfolio built with React, showcasing my skills, projects, and contact information with animations and responsive design.",
-    technologies: ["React", "Tailwind CSS"],
-    liveLink: "https://your-portfolio.com",
-    githubLink: "https://github.com/yourname/portfolio",
+    title: "Recipe Book App",
+    image: "/images/recipe.png",
+    description: "Recipe management app with likes, filters and theme toggle.",
+    technologies: ["React", "MongoDB", "Express", "TailwindCSS"],
+    liveLink: "https://example.com",
+    githubLink: "https://github.com/username/recipe-client",
+    challenges: "Managing likes system and dynamic filtering.",
+    futurePlans: "Add user profile customization and recipe rating system."
   },
 ];
 
