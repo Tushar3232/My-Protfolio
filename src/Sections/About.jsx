@@ -67,7 +67,7 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        {['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS'].map(
+        {[ 'React', 'Node.js',  'MongoDB',  'Tailwind CSS'].map(
           (skill, index) => (
             <span
               key={index}

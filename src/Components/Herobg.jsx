@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Particles from "./Particles";
-import heroImg from "../assets/pic-1.png"; // তোমার ইমেজ পাথ সঠিক রাখো
+import heroImg from "../assets/pic-1.png"; // ইমেজ পাথ ঠিক রাখো
+import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 const Herobg = () => {
   return (
@@ -31,18 +33,25 @@ const Herobg = () => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl md:text-6xl font-extrabold text-cyan-400 mb-4 leading-tight">
-            Hi, I’m 
+            Hi, I’m
           </h1>
-          <h2>
-            <span className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Tushar Debnath</span>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+            <Typewriter
+              options={{
+                strings: ["Tushar Debnath"],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                deleteSpeed: 50,
+              }}
+            />
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0">
-            I’m a Diploma in Computer Science and Technology student passionate
-            about <span className="text-cyan-300">MERN Stack</span> and creating
-            modern, responsive web applications.
+            I’m a <span className="text-cyan-300">Diploma in Computer Science and Technology</span> student passionate about <span className="text-cyan-300">MERN Stack</span> and creating modern, responsive web applications.
           </p>
 
-          <div className="mt-8 flex justify-center lg:justify-start gap-5">
+          {/* Buttons */}
+          <div className="mt-8 flex justify-center lg:justify-start gap-5 flex-wrap">
             <a
               href="#projects"
               className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full font-semibold hover:scale-105 transition-transform"
@@ -54,6 +63,19 @@ const Herobg = () => {
               className="px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-black transition-all"
             >
               Contact Me
+            </a>
+          </div>
+
+          {/* Social Icons */}
+          <div className="mt-6 flex justify-center lg:justify-start gap-5 text-2xl text-cyan-400">
+            <a href="https://www.linkedin.com/in/tushar-debnath-267a58354" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="hover:text-blue-600 transition-colors duration-300" />
+            </a>
+            <a href="https://www.facebook.com/share/1Eot6decFV/" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="hover:text-blue-500 transition-colors duration-300" />
+            </a>
+            <a href="https://github.com/Tushar3232" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="hover:text-gray-400 transition-colors duration-300" />
             </a>
           </div>
         </motion.div>

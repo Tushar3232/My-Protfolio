@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-black text-gray-300 py-12 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div className=" max-w-11/12 mx-auto grid md:grid-cols-3 gap-8">
 
         {/* About Section */}
         <div className="space-y-4">

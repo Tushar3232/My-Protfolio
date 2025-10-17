@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const ProjectCard = ({ project }) => {
-  const { title, image, description, technologies, liveLink, githubLink, id } = project;
+  const { title, image, description, technologies, liveLink, githubLink,  } = project;
 
   return (
     <div className="relative group">
@@ -56,12 +56,12 @@ const ProjectCard = ({ project }) => {
                 </a>
               )}
             </div>
-            <Link
+            {/* <Link
               to={`/projects/${id}`}
               className="bg-cyan-400 text-black px-4 py-2 rounded-lg hover:bg-cyan-500 transition"
             >
               View More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
